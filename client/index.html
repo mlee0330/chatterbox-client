@@ -6,11 +6,11 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
-
+    
     <!-- dependencies -->
     <script src="bower_components/jquery/jquery.min.js"></script>
     <script src="bower_components/underscore/underscore-min.js"></script>
-    <script src="bower_components/bootstrap/dists/js/bootstrap.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- your scripts -->
     <script src="env/config.js"></script>
     <script src="scripts/app.js"></script>
@@ -18,9 +18,21 @@
   <body>
     <div id="main">
       <h1>chatterbox</h1>
-      <input type="text" class="message" placeholder="Write a Message"></input>
-      <button class="send-btn btn btn-default">Send</button>
-      <button class="update-btn">Update</button>
+      <input type="text" class="message form-control" placeholder="Write a Message"></input>
+      <button class="send-btn btn btn-primary">Send</button>
+      <button class="update-btn btn btn-default">Update</button>
+      <!-- Single button -->
+
+      <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          All Rooms <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Separated link</a></li>
+          <li role="separator" class="divider"></li>
+        </ul>
+      </div>
+
       <!-- Your HTML goes here! -->
       <div class="feed"></div>
     </div>
